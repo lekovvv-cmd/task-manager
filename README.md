@@ -1,54 +1,39 @@
-# React + TypeScript + Vite
+# Task Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Удобное веб-приложение для управления задачами, построенное на базе React, Redux Toolkit и TypeScript. С помощью Tailwind CSS v4, Framer Motion. Вы можете создавать, редактировать, удалять, сортировать и перетаскивать задачи. Каждая задача может иметь приоритет, дедлайн и прикрепленные файлы. Данные хранятся в localStorage, а оформление автоматически подстраивается под светлую или тёмную тему вашей системы.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📋 Содержание
 
-## Expanding the ESLint configuration
+- [Особенности](#-особенности)  
+- [Технологии](#-технологии)  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## ✨ Особенности
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **Создание/редактирование/удаление задач**  
+- **Приоритеты** (High / Medium / Low) и **дедлайн**  
+- **Прикрепление файлов** (любой тип, скачивание/удаление)  
+- **Отметка как выполненной** с затемнением и переносом вниз  
+- **Drag & Drop** сортировка задач  
+- **Фильтрация** (Все / Выполненные / Невыполненные)  
+- **Сортировка** (Приоритет / Дедлайн / Алфавит)  
+- **Автоматический Dark/Light Mode** по системным настройкам  
+- **Адаптивный дизайн** для мобильных и десктопов  
+- **Плавные анимации** модалок и списков (Framer Motion)  
+- **Хранение** в localStorage — без бэкенда  
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## 🛠 Технологии
+
+- React
+- Redux Toolkit  
+- TypeScript  
+- Tailwind CSS v4  
+- Framer Motion  
+- uuid  
+- Heroicons  
+
