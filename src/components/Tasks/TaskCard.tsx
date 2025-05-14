@@ -2,7 +2,6 @@ import { useDispatch } from "react-redux";
 import clsx from "clsx";
 import { type Task } from "../../features/tasks/types";
 import { toggleComplete } from "../../features/tasks/tasksSlice";
-import { ChevronRightIcon } from "@heroicons/react/24/outline";
 
 type Props = {
   task: Task;
@@ -88,9 +87,7 @@ export const TaskCard = ({ task, onClick }: Props) => {
         onClick={onClick}
         className="mt-3 sm:mt-0 sm:ml-auto flex-shrink-0 rounded-full p-1 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors cursor-pointer"
         aria-label="Open task"
-      >
-        <ChevronRightIcon className="h-5 w-5 text-gray-400 dark:text-gray-300" />
-      </button>
+      />
     </div>
   );
 };

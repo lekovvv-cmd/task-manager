@@ -149,19 +149,22 @@ export function TaskModal({ task, onClose }: Props) {
                     key={i}
                     className="flex items-center justify-between text-gray-900 dark:text-white"
                   >
-                    <a
-                      href={file.dataUrl}
-                      download={file.name}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-600 underline mr-2"
-                    >
-                      {file.name}
-                    </a>
+                    <div className="flex-1 min-w-0">
+                      <a
+                        href={file.dataUrl}
+                        download={file.name}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block text-blue-600 underline mr-2 truncate"
+                      >
+                        {file.name}
+                      </a>
+                    </div>
+
                     <button
                       type="button"
                       onClick={() => handleDeleteFile(i)}
-                      className="text-red-500 hover:underline text-sm cursor-pointer"
+                      className="text-red-500 hover:underline text-sm flex-shrink-0"
                     >
                       Delete
                     </button>
